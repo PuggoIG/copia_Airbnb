@@ -1,17 +1,17 @@
 {
   "development": {
-    "username": "lkietymj",
-    "password": "2G5YLehnUKXz6sLlQIjDPKMI708LXFFD",
-    "database": "lkietymj",
+    "username": "dbqfhmws",
+    "password": "kNekEsepY0qlWq_j8MUYkKb1SRp0UcEH",
+    "database": "dbqfhmws",
     "host": "elmer.db.elephantsql.com",
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "jgajqegu",
+    "password": "J1AZ3Bx0M6ljQgzYWrRBapL7dy2OaWT4",
+    "database": "jgajqegu",
+    "host": "stampy.db.elephantsql.com",
+    "dialect": "postgres"
   },
   "production": {
    "use_env_variable":"DATABASE_URL"

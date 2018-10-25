@@ -9,12 +9,13 @@ const createHouse = async(req,res) => {
         if(!address) res.status(400).json({"message":"Error to create address"})
         const facilities =  await Facilities.create({...req.body.facilities,HousesId:house.id})
         if(!facilities) res.status(400).json({"message":"Error to create facilities"})
-        return res.status(200).json({"message":"House created successfully","id":house.id})
+        return res.status(201).json(house)
     }catch(e){
+        console.log(e.message)
         return res.status(400).json(e)
     }
 }
-as:"address"
+
 const getAllHouses = async (req,res)=>{
     let allHouses = await Houses.findAll({where:{},include:[
         {
@@ -62,6 +63,7 @@ const getOneHouse = async(req,res) =>{
 
 
 }
+
 
 
 module.exports = {

@@ -8,7 +8,7 @@ const{calculatePrice,createBooking}=require("../controllers/bookings")
 
 //router.use('/users/',require('./user'));
 
-router.post('/users/signup/',signUp);
+router.post('/users/signup',signUp);
 router.post("/users/login",logIn);
 router.get("/users/me",isAuthenticated,me);
 

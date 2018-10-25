@@ -11,6 +11,8 @@ const port  = process.env.PORT || 9000
 
 const{errors} = require("celebrate");
 
+const cors = require("cors");
+
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -18,6 +20,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/api/v1',routes);
 app.use(errors());
+app.use(cors());
 
 app.get('/', (req,res) => {
     res.send("Everthing Works! :)");
@@ -25,4 +28,6 @@ app.get('/', (req,res) => {
 
 
 app.listen(port,e =>console.log(`works in port ${port}`));
+
+module.exports= app;
 

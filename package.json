@@ -1,25 +1,30 @@
 {
-  "name": "backend_airbnb",
+  "name": "airbnb",
   "version": "1.0.0",
-  "description": "Backend Airbnb",
+  "description": "Airbnb Backend",
   "main": "server.js",
   "scripts": {
     "start": "nodemon ./server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate_test": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest --forceExit"
   },
-  "author": "Edwin Salgado",
+  "author": "Yael Ibarra",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.1",
     "body-parser": "^1.18.3",
     "celebrate": "^9.0.0",
+    "cors": "^2.8.4",
     "express": "^4.16.4",
+    "jest": "^23.6.0",
     "jsonwebtoken": "^8.3.0",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.1",
     "pg": "^7.5.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.39.1"
+    "sequelize": "^4.39.1",
+    "superagent": "^4.0.0-beta.5",
+    "supertest": "^3.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
